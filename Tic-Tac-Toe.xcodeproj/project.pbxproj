@@ -14,6 +14,10 @@
 		5E533EA8280D20250017EC55 /* Tic_Tac_ToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E533EA7280D20250017EC55 /* Tic_Tac_ToeTests.swift */; };
 		5E533EB2280D20250017EC55 /* Tic_Tac_ToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E533EB1280D20250017EC55 /* Tic_Tac_ToeUITests.swift */; };
 		5E533EB4280D20250017EC55 /* Tic_Tac_ToeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E533EB3280D20250017EC55 /* Tic_Tac_ToeUITestsLaunchTests.swift */; };
+		5E533EC3280D32920017EC55 /* PvPPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E533EC2280D32920017EC55 /* PvPPage.swift */; };
+		5E533EC5280D32B60017EC55 /* PvCPUPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E533EC4280D32B60017EC55 /* PvCPUPage.swift */; };
+		5E5FE95228234BA600AF3F6C /* PvPHelpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FE95128234BA600AF3F6C /* PvPHelpPage.swift */; };
+		5E5FE95428246A2600AF3F6C /* PvAlphaBetaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FE95328246A2600AF3F6C /* PvAlphaBetaPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		5E533EAD280D20250017EC55 /* Tic-Tac-ToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tic-Tac-ToeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E533EB1280D20250017EC55 /* Tic_Tac_ToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_ToeUITests.swift; sourceTree = "<group>"; };
 		5E533EB3280D20250017EC55 /* Tic_Tac_ToeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_ToeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5E533EC2280D32920017EC55 /* PvPPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PvPPage.swift; sourceTree = "<group>"; };
+		5E533EC4280D32B60017EC55 /* PvCPUPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PvCPUPage.swift; sourceTree = "<group>"; };
+		5E5FE95128234BA600AF3F6C /* PvPHelpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PvPHelpPage.swift; sourceTree = "<group>"; };
+		5E5FE95328246A2600AF3F6C /* PvAlphaBetaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PvAlphaBetaPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 				5E533E98280D201E0017EC55 /* ContentView.swift */,
 				5E533E9A280D20240017EC55 /* Assets.xcassets */,
 				5E533E9C280D20240017EC55 /* Preview Content */,
+				5E533EC2280D32920017EC55 /* PvPPage.swift */,
+				5E5FE95128234BA600AF3F6C /* PvPHelpPage.swift */,
+				5E533EC4280D32B60017EC55 /* PvCPUPage.swift */,
+				5E5FE95328246A2600AF3F6C /* PvAlphaBetaPage.swift */,
 			);
 			path = "Tic-Tac-Toe";
 			sourceTree = "<group>";
@@ -258,7 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E533E99280D201E0017EC55 /* ContentView.swift in Sources */,
+				5E533EC5280D32B60017EC55 /* PvCPUPage.swift in Sources */,
 				5E533E97280D201E0017EC55 /* Tic_Tac_ToeApp.swift in Sources */,
+				5E5FE95228234BA600AF3F6C /* PvPHelpPage.swift in Sources */,
+				5E533EC3280D32920017EC55 /* PvPPage.swift in Sources */,
+				5E5FE95428246A2600AF3F6C /* PvAlphaBetaPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

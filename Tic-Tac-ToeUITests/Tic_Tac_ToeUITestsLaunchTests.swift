@@ -1,8 +1,6 @@
 //
 //  Tic_Tac_ToeUITestsLaunchTests.swift
-//  Tic-Tac-ToeUITests
-//
-//  Created by Gregory Bove on 4/18/22.
+//  Tic-Tac-ToeUITests 
 //
 
 import XCTest

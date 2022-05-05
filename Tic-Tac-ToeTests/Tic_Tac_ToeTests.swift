@@ -1,8 +1,6 @@
 //
 //  Tic_Tac_ToeTests.swift
-//  Tic-Tac-ToeTests
-//
-//  Created by Gregory Bove on 4/18/22.
+//  Tic-Tac-ToeTests 
 //
 
 import XCTest
