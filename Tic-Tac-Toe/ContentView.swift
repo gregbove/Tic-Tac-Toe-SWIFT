@@ -45,6 +45,17 @@ struct ContentView: View {
                     }
                 }
                     .padding(.bottom)
+                
+                Text("Play a random in the room")
+                NavigationLink(destination: PvRandomPage()) {
+                    HStack {
+                        Text("Face a random computer!")
+                            .frame(alignment: .center)
+                    }
+                }
+                    .padding(.bottom)
+                
+                    .padding(.bottom)
                 Text("Play the smartest one in the room")
                 NavigationLink(destination: PvCPUPage()) {
                     HStack {
@@ -62,7 +73,9 @@ struct ContentView: View {
                 }
                     .padding(.bottom)
             }
+            .padding(.bottom)
         }
+        .padding(.bottom)
     }
 }
 

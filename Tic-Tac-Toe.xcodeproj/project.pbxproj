@@ -18,6 +18,7 @@
 		5E533EC5280D32B60017EC55 /* PvCPUPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E533EC4280D32B60017EC55 /* PvCPUPage.swift */; };
 		5E5FE95228234BA600AF3F6C /* PvPHelpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FE95128234BA600AF3F6C /* PvPHelpPage.swift */; };
 		5E5FE95428246A2600AF3F6C /* PvAlphaBetaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FE95328246A2600AF3F6C /* PvAlphaBetaPage.swift */; };
+		5E5FE9562825634100AF3F6C /* PvRandomPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FE9552825634100AF3F6C /* PvRandomPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		5E533EC4280D32B60017EC55 /* PvCPUPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PvCPUPage.swift; sourceTree = "<group>"; };
 		5E5FE95128234BA600AF3F6C /* PvPHelpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PvPHelpPage.swift; sourceTree = "<group>"; };
 		5E5FE95328246A2600AF3F6C /* PvAlphaBetaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PvAlphaBetaPage.swift; sourceTree = "<group>"; };
+		5E5FE9552825634100AF3F6C /* PvRandomPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PvRandomPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				5E5FE95128234BA600AF3F6C /* PvPHelpPage.swift */,
 				5E533EC4280D32B60017EC55 /* PvCPUPage.swift */,
 				5E5FE95328246A2600AF3F6C /* PvAlphaBetaPage.swift */,
+				5E5FE9552825634100AF3F6C /* PvRandomPage.swift */,
 			);
 			path = "Tic-Tac-Toe";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				5E5FE95228234BA600AF3F6C /* PvPHelpPage.swift in Sources */,
 				5E533EC3280D32920017EC55 /* PvPPage.swift in Sources */,
 				5E5FE95428246A2600AF3F6C /* PvAlphaBetaPage.swift in Sources */,
+				5E5FE9562825634100AF3F6C /* PvRandomPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

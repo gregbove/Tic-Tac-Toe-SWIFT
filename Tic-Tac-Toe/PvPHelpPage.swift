@@ -5,9 +5,6 @@
 
 import SwiftUI
 
-// let sz = (UIScreen.screenWidth - 4 * 5) / 3
-// var winnings = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
-
 struct PvPHelpPage: View {
     @State private var showPopUp: Bool = false
     @State private var gameOver: Bool = false
@@ -26,7 +23,7 @@ struct PvPHelpPage: View {
             Text("With some help!")
                 .font(.system(size: 10))
             Text("Current: " + turn)
-            Grid(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: true, cpuMode: false, abMode: false)
+            Grid(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: true, cpuMode: false, abMode: false, randomMode: false)
             
             HStack {
                 Button(action: {
@@ -100,6 +97,7 @@ func setColorsWithHelp(arr:[String], turn: String) -> [Color] {
             ret[combo[1]] = Color.blue
         }
     }
+    
     // Game Over
     for combo in winnings {
         if (arr[combo[0]] == arr[combo[1]]) && (arr[combo[0]] == arr[combo[2]]) {

@@ -20,7 +20,7 @@ struct PvAlphaBetaPage: View {
             Text("Player Versus CPU")
                 .font(.system(size: 30))
             Text("Current: " + turn)
-            Grid(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: false, cpuMode: true, abMode: true)
+            Grid(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: false, cpuMode: true, abMode: true, randomMode: false)
             
             HStack {
                 Button(action: {

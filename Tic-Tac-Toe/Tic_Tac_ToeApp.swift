@@ -26,6 +26,7 @@ struct Box: View {
     var helpMode: Bool
     var cpuMode: Bool
     var abMode: Bool
+    var randomMode: Bool
     var idx: Int
     var textSize: CGFloat = 60
     
@@ -51,6 +52,10 @@ struct Box: View {
                     if (cpuMode && !gameOver && !tie) {
                         if (abMode) {
                             grid[findBestMoveAB(board: grid)] = turn
+                        }
+                        else if (randomMode) {
+                            print("random")
+                            grid[findBestMoveRandom(board: grid)] = turn
                         }
                         else {
                             grid[findBestMove(board: grid)] = turn
@@ -91,18 +96,19 @@ struct Row: View {
     var helpMode: Bool
     var cpuMode: Bool
     var abMode: Bool
+    var randomMode: Bool
     
     var idx: Int
     
     var body: some View {
         ZStack {
-            Box(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, idx: 3*idx)
+            Box(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, randomMode: randomMode, idx: 3*idx)
         }
         ZStack {
-            Box(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, idx: 3*idx+1)
+            Box(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, randomMode: randomMode, idx: 3*idx+1)
         }
         ZStack {
-            Box(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, idx: 3*idx+2)
+            Box(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, randomMode: randomMode, idx: 3*idx+2)
         }
     }
 }
@@ -115,18 +121,19 @@ struct Grid: View {
     @Binding var tie: Bool
     
     var helpMode: Bool
-    var cpuMode: Bool
+    var cpuMode: Bool 
     var abMode: Bool
+    var randomMode: Bool
     
     var body: some View {
         HStack {
-            Row(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, idx: 0)
+            Row(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, randomMode: randomMode, idx: 0)
         }
         HStack {
-            Row(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, idx: 1)
+            Row(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, randomMode: randomMode, idx: 1)
         }
         HStack {
-            Row(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, idx: 2)
+            Row(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: helpMode, cpuMode: cpuMode, abMode: abMode, randomMode: randomMode, idx: 2)
         }
     }
 }

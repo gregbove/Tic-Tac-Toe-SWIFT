@@ -1,14 +1,12 @@
 //
-//  PvPPage.swift
-//  Tic-Tac-Toe 
+//  PvRandomPage.swift
+//  Tic-Tac-Toe
 //
 
 import SwiftUI
 
-let sz = (UIScreen.screenWidth - 4 * 5) / 3
-var winnings = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
-
-struct PvPPage: View {
+struct PvRandomPage: View {
+    @State private var showPopUp: Bool = false
     @State private var gameOver: Bool = false
     @State private var tie: Bool = false
     @State var turn = "X"
@@ -19,10 +17,10 @@ struct PvPPage: View {
     var body: some View {
         ZStack {
         VStack {
-            Text("Player Versus Player")
+            Text("Player Versus CPU")
                 .font(.system(size: 30))
             Text("Current: " + turn)
-            Grid(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: false, cpuMode: false, abMode: false, randomMode: false)
+            Grid(grid: $grid, c: $c, turn: $turn, gameOver: $gameOver, tie: $tie, helpMode: false, cpuMode: true, abMode: false, randomMode: true)
             
             HStack {
                 Button(action: {
@@ -37,7 +35,6 @@ struct PvPPage: View {
                             .fill(Color.red)
                             .frame(width: sz, height: sz/2)
                         Text("Start Over")
-                            // .font(.headline)
                             .foregroundColor(.black)
                     }
                 }
@@ -48,35 +45,27 @@ struct PvPPage: View {
             }
             else {
                 PopUpWindow(title: "Winner: " + switchTurn(turn: turn) + "!", message: "Nice job :)", buttonText: "Play again!", gameOver: $gameOver, tie: $tie, grid: $grid, turn: $turn, col: $c)
-                
             }
-        }
             
-    }
-}
-
-struct PvPPage_Previews: PreviewProvider {
-    static var previews: some View {
-        PvPPage()
-    }
-}
-
-func setColorsNoHelp(arr:[String], turn: String) -> [Color] {
-    var ret = [Color.green, Color.green, Color.green, Color.green, Color.green, Color.green, Color.green, Color.green, Color.green]
-    
-    var other = "X"
-    if other == turn {
-        other = "O"
-    } 
-    // WINNINGS
-    for combo in winnings {
-        if (arr[combo[0]] == arr[combo[1]]) && (arr[combo[0]] == arr[combo[2]]) {
-            if (arr[combo[0]] != " ") {
-                ret[combo[0]] = Color.red
-                ret[combo[1]] = Color.red
-                ret[combo[2]] = Color.red
-            }
         }
     }
-    return ret
 }
+
+struct PvRandomPage_Previews: PreviewProvider {
+    static var previews: some View {
+        PvRandomPage()
+    }
+}
+
+ 
+func findBestMoveRandom(board: [String]) -> Int { 
+    var spot = Int.random(in: 0...8)
+    
+    while board[spot] != " " {
+        spot = Int.random(in: 0...8)
+    }
+    
+    return spot
+}
+
+
